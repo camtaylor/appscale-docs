@@ -16,7 +16,7 @@ handlers:
   static_dir: js
 
 - url: .*
-  script: dashboard.app
+  script: docs.app
 
 libraries:
 - name: webapp2
