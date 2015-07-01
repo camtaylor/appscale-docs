@@ -1,0 +1,31 @@
+{% extends "docs.html" %}
+
+{% block topic %}
+   {{topic}}
+{% endblock %}
+
+{% block content %}
+ <div class="col-md-2">
+    <!-- Sidebar navigation well -->
+   <ul class="nav navmenu-nav well">
+        <li><a href="/ops?p=1"><h4>Deploy Your App<h4></a></li>       
+        <li><a href="/ops?p=2"><h4>Monitor Your App</h4></a></li>
+        <li><a href="/ops?p=3"><h4>Manage Your App</h4></a></li>
+        <li><a href="/ops?p=4"><h4>Topic 4</h4></a></li>
+        <li><a href="/ops?p=5"><h4>Topic 5</h4></a></li>
+        <li><a href="/ops?p=6"><h4>Topic 6</h4></a></li>
+        <li><a href="/ops?p=7"><h4>Topic 7</h4></a></li>
+        <li><a href="/ops?p=8"><h4>Topic 8</h4></a></li>
+    </ul>
+  </div>
+      <img id="loading" class="img-responsive center-block" src="http://jimpunk.net/Loading/wp-content/uploads/loading1.gif"></img>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe id="embeddedSite" width="300" height="225" src="http://www.appscale.com/get-started/appscale-faststart-on-google-compute-engine/" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+   <script>
+   $('#embeddedSite').load(function() {
+      $("#loading").hide('slow');
+   });
+   </script>
+{% endblock %}

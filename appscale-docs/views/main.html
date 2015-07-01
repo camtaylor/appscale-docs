@@ -1,0 +1,50 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/yeti/bootstrap.min.css">
+  <meta name="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.console.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <style>
+  #main-nav {
+    background: #1577B0;
+  }
+  .btn {
+    background: #1577B0;
+  }
+  </style>
+  <nav id="main-nav" class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="/" class ="navbar-brand">AppScale</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://portal.appscale.com/dashboard"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>    Portal</a></li>
+          <li><p class="navbar-text" aria-label="Left Align"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings</p></li>
+          <!-- <li><a class="btn btn-primary navbar-btn">Sign Out</a></li> -->
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.conaiiner-fluid -->
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+     <!-- Main page content -->
+     {% block content %}
+     {% endblock %}
+   </div>
+ </div>
+ <!-- Start of Async HubSpot Analytics Code -->
+ <script type="text/javascript">
+ (function(d,s,i,r) {
+  if (d.getElementById(i)){return;}
+  var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+  n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/423381.js';
+  e.parentNode.insertBefore(n, e);
+})(document,"script","hs-analytics",300000);
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+{% block content %}
+  <div class="col-md-2">
+    <!-- Sidebar navigation well -->
+  	<ul class="nav navmenu-nav well">
+        {% if persona == "devs" %}
+        <li><a href="/devs?p=1"><h4>What is App Engine?<h4></a></li> 
+        <li style="margin-left: 30px; margin-top:0px;"><a><p>Sub Item 1</p></a></li>      
+        <li><a href="/devs?p=2"><h4>Example Application</h4></a></li>
+        <li><a href="/devs?p=3"><h4>Deploying an App</h4></a></li>
+        <li><a href="/devs?p=4"><h4>Moving an App</h4></a></li>
+        <li><a href="/devs?p=5"><h4>Topic 5</h4></a></li>
+        <li><a href="/devs?p=6"><h4>Topic 6</h4></a></li>
+        <li><a href="/devs?p=7"><h4>Topic 7</h4></a></li>
+        <li><a href="/devs?p=8"><h4>Topic 8</h4></a></li>
+        {% endif %}
+        {% if persona == "ops" %}
+        <li><a href="/ops?p=1"><h4>Deploy Your App<h4></a></li>       
+        <li><a href="/ops?p=2"><h4>Monitor Your App</h4></a></li>
+        <li><a href="/ops?p=3"><h4>Manage Your App</h4></a></li>
+        <li><a href="/ops?p=4"><h4>Topic 4</h4></a></li>
+        <li><a href="/ops?p=5"><h4>Topic 5</h4></a></li>
+        <li><a href="/ops?p=6"><h4>Topic 6</h4></a></li>
+        <li><a href="/ops?p=7"><h4>Topic 7</h4></a></li>
+        <li><a href="/ops?p=8"><h4>Topic 8</h4></a></li>
+        {% endif %}
+        {% if persona == "bus" %}
+        <li><a href="/bus?p=1"><h4>Flex Data<h4></a></li>       
+        <li><a href="/bus?p=2"><h4>Flex Bill</h4></a></li>
+        <li><a href="/bus?p=3"><h4>Flex Ops</h4></a></li>
+        <li><a href="/bus?p=4"><h4>Flex Data</h4></a></li>
+        <li><a href="/bus?p=5"><h4>Topic 5</h4></a></li>
+        <li><a href="/bus?p=6"><h4>Topic 6</h4></a></li>
+        <li><a href="/bus?p=7"><h4>Topic 7</h4></a></li>
+        <li><a href="/bus?p=8"><h4>Topic 8</h4></a></li>
+        {% endif %}
+    </ul>
+  </div>
+  <div id="content-column" class="col-md-10">
+  	<h1 class="page-header"> {% block topic %} {% endblock %}<a href="/{{persona}}?p={{ page|add:1 }}" id="nextButton" class="btn btn-primary pull-right"> Next <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> </a></h1>
+    <h3> 
+      {% block title %}
+      {% endblock %}
+   </h3> <br />
+  </div>
+{% endblock %}

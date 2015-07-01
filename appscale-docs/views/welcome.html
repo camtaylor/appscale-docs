@@ -1,0 +1,76 @@
+{% extends "main.html" %}
+
+{% block content %}
+<style>
+
+.jumbotron {
+ border: 1px solid #F0F0F0;
+ margin-bottom: 0px;
+}
+
+.persona {
+ height: 90vh;
+}
+
+#main-nav {
+  margin-bottom: 0px;
+}
+.col-md-4 {
+  padding: 0px;
+}
+body {
+  overflow-x: hidden;
+}
+
+</style>
+<div class="jumbotron">
+ <div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+   <img class="img-responsive" src="http://tia.ucsb.edu/wp-content/uploads/2012/11/AppScale-Logo-SQ-vector-11.png"></img>
+ </div>
+ <h1>Welcome to AppScale!</h1>
+ <p> The Open Source App Engine </p>
+</div>
+</div>
+<div class="row">
+ <div class="col-md-4">
+  <div class="jumbotron persona">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-8">
+        <a href="/devs?p=1"><img class="img-responsive" src="http://www.icssuk.com/wp-content/uploads/2015/04/responsive-website-design.png"></img></a>
+      </div>
+    </div>
+    <h2 class="page-header"><a href="/devs?p=1">AppScale For Devs</a></h2>
+    <p> Learn how to quickly develop apps with App Engine APIs </p>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="jumbotron persona">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <a href="/ops?p=1"><img class="img-responsive" src="https://s3.amazonaws.com/university-prod/uploads/attachments/207/original/cmdline-lesson-hero-web.gif?1409849896"></img></a>
+      </div>
+      <br/>
+    </div>
+    <h2 class="page-header"><a href="/ops?p=1">AppScale For Ops</a></h2>
+    <p> Deploy, Monitor, and Manage your Application</p>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="jumbotron persona">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-8">
+        <a href="/bus?p=1"><img class="img-responsive" src="http://www.fivestardev.com/wp-content/uploads/2013/09/bar-chart-blue.png"></img></a>
+      </div>
+    </div>
+    <h2 class="page-header"><a href="/bus?p=1">AppScale For Business</a></h2>
+    <p> The cloud has never been more flexible for business</p>
+  </div>
+</div>
+</div>
+
+{% endblock %}

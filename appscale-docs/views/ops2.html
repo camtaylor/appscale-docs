@@ -1,0 +1,80 @@
+{% extends "docs.html" %}
+
+{% block topic %}
+   {{topic}}
+{% endblock %}
+
+{% block title %}
+   {{title}}
+   <script type="text/javascript" src="js/registration.js"></script>
+   <div class="row">
+      <div class="col-md-12 well">
+         <div class="col-md-1"></div>
+         <div class="col-md-4"> 
+            <br/>
+            <img class="img-responsive" src="https://portal.appscale.com/assets/img/logo.png"></img>
+            <br/> 
+            <br/>
+            <img class="img-responsive" src="https://portal.appscale.com/assets/frontend/img/band-2-notifications%20he.png"></img>
+            <br/>
+            <small> Monitor your App Engine Application with Hawkeye</small>
+        </div>
+        <div class="col-md-1"></div>
+         <div class="col-md-5">
+            <h3 class="page-header"> Sign Up With The Appscale Portal</h3>
+      <form id="portalForm" class="form-horizontal" enctype="multipart/form-data"  action="https://portal.appscale.com/trial" method="POST">
+        <fieldset>
+          <div id="legend">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="control-group">
+                <h4>First Name</h4>
+                <div class="controls">
+                  <input type="text" id="firstname" name="firstname" placeholder="" class="form-control input-lg" required>
+                </div>
+              </div> 
+            </div>
+            <div class="col-md-6">    
+              <div class="control-group">
+              <h4>Last Name</h4>
+                <div class="controls">
+                <input type="text" id="lastname" name="lastname" placeholder="" class="form-control input-lg" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="control-group">
+            <h4>Email</h4>
+            <div class="controls">
+              <!-- Hubspot hidden input -->
+            <input value="" name="hutk" type="hidden" id="hutk">
+            <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" required>
+            </div>
+          </div>
+          <div class="control-group">
+            <h4>Password</h4>
+            <div class="controls">
+              <input type="password" id="password1" name="password1" placeholder="" class="form-control input-lg" required>
+            </div>
+          </div>
+          <div class="control-group">
+          <h4>Confirm Password<small id="passwords_match" class="label label-danger pull-right" style="display:none;">Passwords do not match</small></h4>
+            <div class="controls">
+            <input type="password" id="c_password" name="c_password" placeholder="" class="form-control input-lg" required>
+            </div>
+          </div>
+          <br/>
+          <div class="control-group">
+          <!-- Button -->
+            <div class="controls">
+              <button class="btn btn-primary btn-lg" id="signup" style="display: block; width: 100%;">Sign Up</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+         </div>
+   </div>
+   </div>
+{% endblock %}
