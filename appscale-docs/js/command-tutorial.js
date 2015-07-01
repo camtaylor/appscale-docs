@@ -23,26 +23,34 @@
          var controller5  = console5.console({
           promptLabel: 'AppScale > ',
           commandHandle:function(line){
-            if (line == "appscale up") {
-              $("#nextButton").toggleClass("btn-primary btn-success");
-              $("#title").fadeOut("slow");
-              $("#title").hide().html('Appscale is now up and running.').fadeIn("slow");
-              return [{msg: appscaleUp,className:"jquery-console-message-value"}];
+
+            // switch statement to parse command line input
+            switch(line) {
+              case "appscale up":
+                $("#nextButton").toggleClass("btn-primary btn-success");
+                $("#title").fadeOut("slow");
+                $("#title").hide().html('Appscale is now up and running.').fadeIn("slow");
+                return [{msg: appscaleUp,className:"jquery-console-message-value"}];
+                break;
+              case "appscale down":
+                $("#title").fadeOut("slow");
+                $("#title").hide().html('Appscale is now down.').fadeIn("slow");
+                break;
+              case "ls":
+                $("#title").fadeOut("slow");
+                $("#title").hide().html('You can see the example application and the AppScalefile. Try typing appscale deploy guestbook').fadeIn("slow");
+                return [{msg: ls,className:"jquery-console-message-value"}];
+                break;
+              case "appscale deploy guestbook":
+                $("#title").fadeOut("slow");
+                $("#title").hide().html('The guestbook application is now deployed').fadeIn("slow");
+                return [{msg: appscaleDeploy,className:"jquery-console-message-value"}];
+                break;
+              default:
+                var m = "Unrecognized command \'" + line + "\'";
+                return [{msg: m,className:"jquery-console-message-value"}];
             }
-            else if (line == "ls"){
-              $("#title").fadeOut("slow");
-              $("#title").hide().html('You can see the example application and the AppScalefile. Try typing appscale deploy guestbook').fadeIn("slow");
-              return [{msg: ls,className:"jquery-console-message-value"}];
-            }
-            else if (line == "appscale deploy guestbook"){
-              $("#title").fadeOut("slow");
-              $("#title").hide().html('The guestbook application is now deployed').fadeIn("slow");
-              return [{msg: appscaleDeploy,className:"jquery-console-message-value"}];
-            }
-            else {
-              var m = "Unrecognized command \'" + line + "\'";
-              return [{msg: m,className:"jquery-console-message-value"}];
-            }
+           
           },
           colors: ["red","blue","green","black","yellow","white","grey"],
           cols: 40,
