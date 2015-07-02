@@ -61,6 +61,10 @@ class OpsHandler(webapp2.RequestHandler):
       topic = "Registering Appscale"
       title = "Type the \"some command\" command into the terminal to start register your appscale instance."
       html_page = 'views/ops5.html'
+    else:
+      #return to main persona page
+      self.redirect('/')
+      return
     self.response.out.write(template.render(html_page, {'page' : p, 'persona' : persona,'title' : title, 'topic' : topic}))
 
 class BusinessHandler(webapp2.RequestHandler):

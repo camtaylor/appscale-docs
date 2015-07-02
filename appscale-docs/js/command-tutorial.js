@@ -52,18 +52,6 @@
             }
            
           },
-          colors: ["red","blue","green","black","yellow","white","grey"],
           cols: 40,
-          completeHandle:function(prefix){
-            var colors = this.colors;
-            var ret = [];
-            for (var i=0;i<colors.length;i++) {
-              var color=colors[i];
-              if (color.lastIndexOf(prefix,0) === 0) {
-                ret.push(color.substring(prefix.length));
-              }
-            }
-            return ret;
-          }
          });
       });
