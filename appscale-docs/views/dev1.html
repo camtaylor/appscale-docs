@@ -3,20 +3,25 @@
 {% block topic %}
    {{topic}}
 {% endblock %}
-{% block title %}
-   <div class="row">
-      <br/>
-      <div class="col-md-2"></div>
-      <div class="col-md-7">
-         <img class="img-responsive" src="https://cloud.google.com/images/01_WebApp_ArchDiagram.png" style="margin:-40px;"></img>
-          <p>
-         Google App Engine is a Platform as a Service (PaaS) offering that lets you build and run applications on Google’s infrastructure. App Engine applications are easy to build, easy to maintain, and easy to scale as your traffic and data storage needs change. With App Engine, there are no servers for you to maintain. You simply upload your application and it’s ready to go.
-          </p>
-      </div>
-      <div class="col-md-5">
-   	<!-- <div class="embed-responsive embed-responsive-16by9">
+
+{% block text %}
+<div class="row">
+  <div class="col-md-5">
+      <!-- <div class="embed-responsive embed-responsive-16by9">
         <iframe width="300" height="225" src="https://www.youtube.com/embed/ytT2-kL9v2o" frameborder="0" allowfullscreen></iframe>
-      </div> -->
-   </div>
-   </div>
+     </div> -->
+     <br/>
+      <br/>
+     <p style="font-size: 22px;">
+      Google App Engine is a Platform as a Service (PaaS) offering that lets you build and run applications on Google’s infrastructure. App Engine applications are easy to build, easy to maintain, and easy to scale as your traffic and data storage needs change. With App Engine, there are no servers for you to maintain. You simply upload your application and it’s ready to go.
+   </p>
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-md-5">
+   <br/>
+   <img class="img-responsive" src="https://cloud.google.com/images/01_WebApp_ArchDiagram.png" style="margin:-40px;"></img>
+   </div> 
+</div>
+
+
 {% endblock %}

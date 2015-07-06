@@ -4,8 +4,20 @@
    {{topic}}
 {% endblock %}
 
-{% block title %}
+{% block text %}
    <div class="row">
-      <br/>
+      <div class="col-md-5">
+       <br/>
+       <p style="font-size: 22px;">
+       	 <br/>
+         The example application to the right is a simple app engine application. You can write something in the box and post it. 
+         The data will be written to the datastore and refresh the view. On the next page we will cover how to implement the guestbook application.
+       </p>
+      </div>
+      <div class="col-md-6">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe width="300" height="200" src="http://guestbook.appscale.com" frameborder="0" allowfullscreen></iframe>
+     </div>
+     </div>
    </div>
 {% endblock %}

@@ -76,7 +76,7 @@ class BusinessHandler(webapp2.RequestHandler):
     html_page = ""
     if p == 1:
       topic = "Flex Data"
-      title = "AppScale supports data residency. Hover over each supported country to blah blah"
+      title = ""
       html_page = "views/bus1.html"
     elif p == 2:
       topic = "Flex Bill"
